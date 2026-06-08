@@ -354,6 +354,14 @@ td.w{color:#B45309;font-weight:600}
   <a href="#meta-copy"><span class="dot"></span>Análise de Copy</a>
   <a href="#meta-plano"><span class="dot"></span>Plano 90 Dias Meta</a>
 
+  <span class="nav-section">LinkedIn Ads</span>
+  <a href="#li-inicio"><span class="dot"></span>Visão Geral</a>
+  <a href="#li-campanhas"><span class="dot"></span>Campanhas & Objetivos</a>
+  <a href="#li-segmentacao"><span class="dot"></span>Segmentação</a>
+  <a href="#li-formatos"><span class="dot"></span>Formatos & Criativos</a>
+  <a href="#li-copy"><span class="dot"></span>Análise de Copy</a>
+  <a href="#li-plano"><span class="dot"></span>Plano 90 Dias LinkedIn</a>
+
   <div class="nav-footer">
     <div class="v4-tag">V4 Company</div>
     Conta: 527-814-0513<br>
@@ -2295,6 +2303,740 @@ h1.meta-title em{font-style:normal;opacity:.85;}
 </section>
 
 </div><!-- /meta-content -->
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--                    LINKEDIN ADS — DIAGNÓSTICO COMPLETO            -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<style>
+:root {
+  --li:      #0A66C2;
+  --li-d:    #004182;
+  --li-l:    #378FE9;
+  --li-10:   rgba(10,102,194,0.10);
+  --li-06:   rgba(10,102,194,0.06);
+  --li-20:   rgba(10,102,194,0.20);
+  --li-30:   rgba(10,102,194,0.30);
+}
+.li-divider{
+  background:linear-gradient(135deg,#004182 0%,#0A66C2 60%,#378FE9 100%);
+  padding:48px 52px 44px;position:relative;overflow:hidden;
+}
+.li-divider::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.05);}
+.li-divider::after{content:'';position:absolute;bottom:-50px;left:140px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.04);}
+.li-logo-box{width:52px;height:52px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 10px rgba(0,0,0,0.2);font-size:20px;font-weight:900;color:#0A66C2;font-family:'Syne',sans-serif;letter-spacing:-.5px;}
+.li-period-badge{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:5px 14px;font-size:11px;color:#fff;font-weight:500;letter-spacing:.03em;margin-left:auto;}
+h1.li-title{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;line-height:1.1;letter-spacing:-0.8px;color:#fff;margin-bottom:10px;}
+h1.li-title em{font-style:normal;opacity:.85;}
+.li-header-sub{font-size:13px;color:rgba(255,255,255,0.75);max-width:720px;line-height:1.7;margin-bottom:22px;}
+.li-header-meta{display:flex;flex-wrap:wrap;gap:20px;font-size:12px;color:rgba(255,255,255,0.6);}
+.li-content{padding:38px 52px;background:var(--white);}
+.li-section-title{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.li-section-title h2{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--text);letter-spacing:-.2px;}
+.li-num{width:30px;height:30px;border-radius:8px;background:var(--li);color:#fff;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.li-kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;margin-bottom:18px;}
+.li-kpi{background:var(--off);border:1px solid var(--gray-2);border-radius:10px;padding:14px 16px;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+.li-kpi:hover{border-color:var(--li-30);box-shadow:0 2px 12px var(--li-10);}
+.li-kpi::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--li);}
+.li-kpi.alert::after{background:var(--red);}
+.li-kpi.ok::after{background:var(--green);}
+.li-kpi.warn::after{background:var(--amber);}
+.li-kpi.dim::after{background:var(--gray-3);}
+.li-kpi-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;}
+.li-kpi-value{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--text);line-height:1;margin-bottom:5px;}
+.li-kpi-value.alert{color:var(--red);}
+.li-kpi-value.ok{color:var(--green);}
+.li-kpi-value.warn{color:var(--amber);}
+.li-kpi-note{font-size:10px;color:var(--muted);}
+.li-alert{display:flex;gap:14px;align-items:flex-start;background:var(--red-06);border:1px solid var(--red-20);border-radius:10px;padding:16px 20px;margin-bottom:14px;}
+.li-alert-ok{display:flex;gap:14px;align-items:flex-start;background:var(--green-10);border:1px solid rgba(22,163,74,0.25);border-radius:10px;padding:16px 20px;margin-bottom:14px;}
+.li-alert-warn{display:flex;gap:14px;align-items:flex-start;background:var(--amber-10);border:1px solid rgba(217,119,6,0.25);border-radius:10px;padding:16px 20px;margin-bottom:14px;}
+.li-alert-blue{display:flex;gap:14px;align-items:flex-start;background:var(--li-06);border:1px solid var(--li-20);border-radius:10px;padding:16px 20px;margin-bottom:14px;}
+.li-box{background:var(--off);border:1px solid var(--gray-2);border-radius:10px;padding:18px 20px;margin-bottom:14px;}
+.li-box h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.li-box p,.li-box-text{font-size:12.5px;color:var(--text2);line-height:1.65;}
+.li-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px;}
+.li-table th{text-align:left;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:2px solid var(--gray-2);font-weight:600;}
+.li-table td{padding:9px 10px;border-bottom:1px solid var(--gray-1);color:var(--text2);}
+.li-table tr:last-child td{border-bottom:none;}
+.li-table tr:hover td{background:var(--off);}
+.li-table .val{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--text);}
+.li-table .val.g{color:var(--green);}
+.li-table .val.r{color:var(--red);}
+.li-table .val.b{color:var(--li);}
+.li-table .val.o{color:var(--amber);}
+.li-g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px;}
+.li-g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;}
+.li-bar-item{margin-bottom:14px;}
+.li-bar-item:last-child{margin-bottom:0;}
+.li-bar-label{display:flex;justify-content:space-between;margin-bottom:5px;font-size:12px;}
+.li-bar-label .n{color:var(--text);font-weight:500;}
+.li-bar-label .v{color:var(--text2);}
+.li-bar-label .v.b{color:var(--li);font-weight:600;}
+.li-bar-label .v.g{color:var(--green);font-weight:600;}
+.li-bar-label .v.r{color:var(--red);font-weight:600;}
+.li-bar-label .v.o{color:var(--amber);font-weight:600;}
+.li-bar-track{height:5px;background:var(--gray-2);border-radius:3px;overflow:hidden;}
+.li-bar-fill{height:100%;border-radius:3px;background:var(--li);transition:width 1s ease;}
+.li-bar-fill.g{background:var(--green);}
+.li-bar-fill.r{background:var(--red);}
+.li-bar-fill.o{background:var(--amber);}
+.li-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+.li-tag.ativo{background:var(--green-10);color:var(--green);}
+.li-tag.pausado{background:var(--gray-1);color:var(--muted);}
+.li-tag.problema{background:var(--red-06);color:var(--red);}
+.li-tag.ok{background:var(--li-10);color:var(--li);}
+.li-plan-phase{background:var(--off);border:1px solid var(--gray-2);border-radius:12px;padding:20px 22px;margin-bottom:16px;border-left:4px solid var(--li);}
+.li-plan-phase.p2{border-left-color:var(--orange);}
+.li-plan-phase.p3{border-left-color:var(--green);}
+.li-plan-phase-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.li-phase-badge{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;background:var(--li-10);color:var(--li);}
+.li-phase-badge.p2{background:rgba(249,115,22,0.10);color:var(--orange);}
+.li-phase-badge.p3{background:var(--green-10);color:var(--green);}
+.li-plan-phase h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--text);}
+.li-plan-phase h3 span{font-size:11px;font-weight:400;color:var(--muted);margin-left:8px;}
+.li-checklist{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.li-checklist li{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--text2);line-height:1.55;}
+.li-checklist li::before{content:'→';color:var(--li);flex-shrink:0;font-weight:700;margin-top:1px;}
+.li-checklist li.p2::before{color:var(--orange);}
+.li-checklist li.p3::before{color:var(--green);}
+.li-checklist li strong{color:var(--text);font-weight:600;}
+.li-separator{border:none;border-top:2px dashed var(--gray-2);margin:32px 0;}
+.goals-grid-li{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;}
+.goal-card-li{background:var(--off);border:1px solid var(--gray-2);border-radius:10px;padding:14px 16px;}
+.goal-card-li .gc-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;}
+.goal-card-li .gc-now{font-size:12px;color:var(--text2);margin-bottom:4px;}
+.goal-card-li .gc-target{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--li);}
+.li-formato-card{background:var(--off);border:1px solid var(--gray-2);border-radius:10px;padding:14px 16px;}
+.li-formato-card .fc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.li-formato-card .fc-name{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--text);}
+.li-formato-card .fc-body{font-size:12px;color:var(--text2);line-height:1.6;}
+.li-formato-card .fc-metric{margin-top:8px;font-size:11px;color:var(--muted);}
+</style>
+
+<!-- ──────────────────────────────────────────────── -->
+<!--  LINKEDIN ADS HEADER BAND                       -->
+<!-- ──────────────────────────────────────────────── -->
+<div class="li-divider" id="li-inicio">
+  <div class="header-logo-row">
+    <div class="li-logo-box">in</div>
+    <div class="header-logo-label">
+      <strong style="color:#fff">LinkedIn Ads · V4 Company</strong>
+      <span style="color:rgba(255,255,255,.65);font-size:11px;display:block">Nosso negócio é vender o seu!</span>
+    </div>
+    <div class="li-period-badge">Conta #530290433 · Diagnóstico Estratégico</div>
+  </div>
+  <h1 class="li-title">Diagnóstico <em>LinkedIn Ads</em><br>& Plano de Ação 90 Dias</h1>
+  <p class="li-header-sub">Análise estratégica da conta <strong style="color:#fff">Beemore</strong> (ID 530290433) no LinkedIn Campaign Manager. O LinkedIn é o <strong style="color:#fff">canal com maior potencial para o ICP da Beemore</strong> — decisores B2B com poder de compra de SaaS. Este diagnóstico identifica os erros estruturais e propõe o roadmap para gerar leads qualificados em 90 dias.</p>
+  <div class="li-header-meta">
+    <span>📍 Beemore · CRM & Help Desk SaaS · Brusque/SC</span>
+    <span>🎯 ICP: Gestores Comerciais · Donos de PME · Coords. Atendimento</span>
+    <span>💼 LinkedIn: canal certo — execução a corrigir</span>
+    <span style="color:#93c5fd;font-weight:600">🔑 Vantagem: targeting por cargo, empresa e setor nativo</span>
+  </div>
+</div>
+
+<div class="li-content">
+
+<!-- L1 — VISÃO GERAL -->
+<section id="li-inicio-kpis" style="margin-bottom:36px">
+  <div class="li-section-title">
+    <div class="li-num">L1</div>
+    <h2>Visão Geral — Por Que o LinkedIn é o Canal Certo para a Beemore</h2>
+  </div>
+
+  <div class="li-alert-blue" style="margin-bottom:22px">
+    <div style="font-size:22px;flex-shrink:0">💼</div>
+    <div>
+      <h4 style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--li);margin-bottom:4px">LinkedIn é o único canal onde você encontra o decisor B2B pelo cargo</h4>
+      <p style="font-size:12.5px;color:var(--text2);line-height:1.65;max-width:680px">Enquanto Google depende de intenção de busca e Meta sofre com audiência jovem não-qualificada, o <strong>LinkedIn permite segmentar exatamente por cargo, empresa, setor e senioridade</strong>. Um anúncio direcionado a "Gerentes Comerciais de empresas de 11–200 funcionários no Brasil" encontra o ICP exato da Beemore — sem depender de algoritmo, interesse ou comportamento de navegação.</p>
+    </div>
+  </div>
+
+  <div class="li-kpi-grid">
+    <div class="li-kpi ok">
+      <div class="li-kpi-label">Potencial do Canal</div>
+      <div class="li-kpi-value ok">Alto</div>
+      <div class="li-kpi-note">B2B SaaS · ICP preciso</div>
+    </div>
+    <div class="li-kpi warn">
+      <div class="li-kpi-label">CPL Estimado LinkedIn</div>
+      <div class="li-kpi-value warn">R$80–250</div>
+      <div class="li-kpi-note">Lead Gen Form nativo</div>
+    </div>
+    <div class="li-kpi warn">
+      <div class="li-kpi-label">CPC Médio LinkedIn BR</div>
+      <div class="li-kpi-value warn">R$18–45</div>
+      <div class="li-kpi-note">B2B SaaS · cargo-based</div>
+    </div>
+    <div class="li-kpi alert">
+      <div class="li-kpi-label">CTR Sponsored Content</div>
+      <div class="li-kpi-value alert">0,3–0,7%</div>
+      <div class="li-kpi-note">Abaixo de 0,3% = criativo fraco</div>
+    </div>
+    <div class="li-kpi ok">
+      <div class="li-kpi-label">Lead Gen Form — Compl.</div>
+      <div class="li-kpi-value ok">10–20%</div>
+      <div class="li-kpi-note">Formulário nativo LinkedIn</div>
+    </div>
+    <div class="li-kpi ok">
+      <div class="li-kpi-label">Taxa Qualif. Esperada</div>
+      <div class="li-kpi-value ok">25–40%</div>
+      <div class="li-kpi-note">Com targeting correto</div>
+    </div>
+    <div class="li-kpi warn">
+      <div class="li-kpi-label">Budget Mín. Recomendado</div>
+      <div class="li-kpi-value warn">R$3.000</div>
+      <div class="li-kpi-note">Por mês · fase de teste</div>
+    </div>
+    <div class="li-kpi ok">
+      <div class="li-kpi-label">Audience Size ICP BR</div>
+      <div class="li-kpi-value ok">180K–420K</div>
+      <div class="li-kpi-note">Estimativa cargos-alvo</div>
+    </div>
+    <div class="li-kpi ok">
+      <div class="li-kpi-label">Formatos Disponíveis</div>
+      <div class="li-kpi-value ok">8+</div>
+      <div class="li-kpi-note">Sponsored · Lead Gen · Message</div>
+    </div>
+    <div class="li-kpi ok">
+      <div class="li-kpi-label">Targeting por Cargo</div>
+      <div class="li-kpi-value ok">Nativo</div>
+      <div class="li-kpi-note">Não existe no Google/Meta</div>
+    </div>
+    <div class="li-kpi ok">
+      <div class="li-kpi-label">Company Targeting</div>
+      <div class="li-kpi-value ok">Nativo</div>
+      <div class="li-kpi-note">Por empresa específica (ABM)</div>
+    </div>
+    <div class="li-kpi warn">
+      <div class="li-kpi-label">Audience Expansion</div>
+      <div class="li-kpi-value warn">Desligar</div>
+      <div class="li-kpi-note">Expande para fora do ICP</div>
+    </div>
+  </div>
+
+  <div class="li-g2">
+    <div class="li-alert-ok">
+      <div style="font-size:20px;flex-shrink:0">✅</div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--green);margin-bottom:5px">LinkedIn resolve o problema raiz identificado no Meta</h4>
+        <p class="li-box-text">No Meta, o problema central foi audiência jovem de 18–24 anos sem poder de compra. No LinkedIn, isso não existe: <strong>a plataforma filtra nativamente por cargo e senioridade</strong>. "Gerente Comercial, 35 anos, empresa de 50 funcionários" é a segmentação padrão — não uma exceção difícil de configurar.</p>
+      </div>
+    </div>
+    <div class="li-alert">
+      <div style="font-size:20px;flex-shrink:0">⚠️</div>
+      <div>
+        <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--red);margin-bottom:5px">Mas o canal certo com execução errada ainda não gera resultado</h4>
+        <p class="li-box-text">LinkedIn Ads com <strong>Audience Expansion ativo, criativos do Meta reaproveitados e Lead Gen Forms sem qualificação</strong> vão reproduzir o mesmo padrão — leads de volume, zero qualificados. As seções L2–L6 detalham os erros mais comuns e o que precisa mudar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- L2 — CAMPANHAS E OBJETIVOS -->
+<section id="li-campanhas" style="margin-bottom:36px">
+  <div class="li-section-title">
+    <div class="li-num">L2</div>
+    <h2>Campanhas & Objetivos — Diagnóstico da Estrutura</h2>
+  </div>
+
+  <div class="li-alert" style="margin-bottom:18px">
+    <div style="font-size:18px;flex-shrink:0">🎯</div>
+    <div>
+      <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--red-d);margin-bottom:3px">Objetivo errado = lead errado, independente da plataforma</h4>
+      <p class="li-box-text">No LinkedIn Campaign Manager, o objetivo da campanha define <strong>como o algoritmo otimiza a entrega</strong>. Campanhas com objetivo "Website Visits" entregam para quem provavelmente clica — não para quem tem intenção de compra. Campanhas de "Brand Awareness" entregam impressões baratas para o maior número de pessoas — que podem ser totalmente fora do ICP. <strong>Para geração de leads qualificados, o único objetivo correto é "Lead Generation" com Lead Gen Form nativo.</strong></p>
+    </div>
+  </div>
+
+  <div class="tw" style="margin-bottom:18px">
+    <table class="li-table" style="width:100%">
+      <thead>
+        <tr>
+          <th>Objetivo de Campanha</th>
+          <th>O que o algoritmo otimiza</th>
+          <th>Resultado para Beemore</th>
+          <th>Usar?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="s">Brand Awareness</td>
+          <td>Máximo de impressões baratas</td>
+          <td>Alcance sem conversão, CPM baixo, CPL ∞</td>
+          <td class="a">❌ Não agora</td>
+        </tr>
+        <tr>
+          <td class="s">Website Visits</td>
+          <td>Cliques no site</td>
+          <td>Tráfego para página sem tracking = zero dado</td>
+          <td class="a">❌ Não sem GTM</td>
+        </tr>
+        <tr>
+          <td class="s">Engagement</td>
+          <td>Likes, comentários, compartilhamentos</td>
+          <td>Vaidade de métricas, não gera pipeline</td>
+          <td class="a">❌ Não</td>
+        </tr>
+        <tr>
+          <td class="s">Lead Generation (Lead Gen Form)</td>
+          <td>Preenchimento do form nativo LinkedIn</td>
+          <td>Lead com dados reais de perfil LinkedIn</td>
+          <td class="ok">✅ Principal</td>
+        </tr>
+        <tr>
+          <td class="s">Website Conversions</td>
+          <td>Conversões no site (requer pixel)</td>
+          <td>Bom após GTM instalado e LP dedicada</td>
+          <td style="color:#D97706;font-weight:600">⚠ Fase 2</td>
+        </tr>
+        <tr>
+          <td class="s">Message Ads (InMail)</td>
+          <td>Abertura e clique em mensagem direta</td>
+          <td>Alta personalização, CPL moderado</td>
+          <td class="ok">✅ Fase 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="li-g2">
+    <div class="li-box">
+      <h4>Estrutura de Campanhas Recomendada para Beemore</h4>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:8px">
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--li);font-weight:700;flex-shrink:0">→</span><span><strong>Campanha 1 — ICP Core:</strong> Lead Gen Form · Cargo: Gerente Comercial + CEO + Diretor de Vendas · Empresa: 11–200 funcionários · Objetivo: 30 leads qualificados/mês</span></li>
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--li);font-weight:700;flex-shrink:0">→</span><span><strong>Campanha 2 — Atendimento:</strong> Lead Gen Form · Cargo: Coord. Atendimento + Head de Suporte + Analista de CS · Empresa: 11–500 funcionários · Objetivo: 20 leads qualificados/mês</span></li>
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--li);font-weight:700;flex-shrink:0">→</span><span><strong>Campanha 3 — Retargeting:</strong> Website Visits (após GTM) · Visitantes do site últimos 90 dias · Message Ads com oferta de demo</span></li>
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--li);font-weight:700;flex-shrink:0">→</span><span><strong>Campanha 4 — ABM (Fase 3):</strong> Empresas-alvo específicas · Sponsored Content + Message Ads · Abordagem consultiva</span></li>
+      </ul>
+    </div>
+    <div class="li-box">
+      <h4>Erros Mais Comuns em Contas LinkedIn B2B SaaS</h4>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:8px">
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✕</span><span><strong>Audience Expansion ativo:</strong> LinkedIn expande automaticamente para fora dos cargos definidos — mesmo efeito do Advantage+ do Meta</span></li>
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✕</span><span><strong>Reaproveitar criativos do Meta/Instagram:</strong> formato visual e copy do Meta não funciona no LinkedIn — contexto profissional exige linguagem diferente</span></li>
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✕</span><span><strong>Lead Gen Form sem perguntas de qualificação:</strong> o form nativo do LinkedIn já pré-preenche dados do perfil — mas sem qualificação, gera o mesmo problema do Meta</span></li>
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✕</span><span><strong>Budget abaixo do mínimo:</strong> LinkedIn precisa de R$3.000+/mês para o algoritmo aprender. Abaixo disso, dados insuficientes para otimização</span></li>
+        <li style="display:flex;gap:8px;font-size:12px;color:var(--text2)"><span style="color:var(--red);font-weight:700;flex-shrink:0">✕</span><span><strong>Objetivo "Website Visits" sem pixel:</strong> sem rastreamento, a campanha otimiza para cliques baratos — não para clientes potenciais</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- L3 — SEGMENTAÇÃO -->
+<section id="li-segmentacao" style="margin-bottom:36px">
+  <div class="li-section-title">
+    <div class="li-num">L3</div>
+    <h2>Segmentação LinkedIn — O Maior Diferencial do Canal</h2>
+  </div>
+
+  <div class="li-alert-blue" style="margin-bottom:18px">
+    <div style="font-size:18px;flex-shrink:0">🎯</div>
+    <div>
+      <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--li);margin-bottom:3px">LinkedIn tem os dados profissionais mais precisos do mundo — use-os</h4>
+      <p class="li-box-text">O LinkedIn tem 900M+ perfis com dados profissionais autodeclarados e atualizados. <strong>Cargo, empresa, tamanho, setor, senioridade e habilidades</strong> são os critérios de segmentação — exatamente o que a Beemore precisa para encontrar gestores comerciais de PMEs. Isso não existe em nenhum outro canal.</p>
+    </div>
+  </div>
+
+  <div class="li-g2" style="margin-bottom:18px">
+    <div class="li-box">
+      <h4>Segmentação ICP Primário — Gestor Comercial</h4>
+      <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--li);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Job Title (AND com OR interno)</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px">
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Gerente Comercial</span>
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Diretor de Vendas</span>
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Sales Manager</span>
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Head de Vendas</span>
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">VP Comercial</span>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--li);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Company Size</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px">
+            <span style="background:var(--green-10);color:var(--green);border-radius:4px;padding:2px 8px;font-size:11px">11–50 funcionários</span>
+            <span style="background:var(--green-10);color:var(--green);border-radius:4px;padding:2px 8px;font-size:11px">51–200 funcionários</span>
+            <span style="background:var(--amber-10);color:var(--amber);border-radius:4px;padding:2px 8px;font-size:11px">201–500 funcionários</span>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--li);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Seniority</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px">
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Senior</span>
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Manager</span>
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Director</span>
+            <span style="background:var(--li-10);color:var(--li);border-radius:4px;padding:2px 8px;font-size:11px">Owner</span>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--li);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Localização</div>
+          <span style="font-size:11px;color:var(--text2)">Brasil · São Paulo · Rio de Janeiro · Sul · Minas Gerais</span>
+        </div>
+      </div>
+    </div>
+    <div class="li-box">
+      <h4>Segmentação ICP Secundário — Coord. Atendimento + Dono de PME</h4>
+      <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Atendimento / CS / Suporte</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px">
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Coord. de Atendimento</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Head de Customer Success</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Gerente de Suporte</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">CS Manager</span>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Donos de PME (Job Function)</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px">
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">CEO</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Founder</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">COO</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Managing Director</span>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Setores Prioritários</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px">
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Varejo</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Serviços Financeiros</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Tecnologia</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Saúde</span>
+            <span style="background:rgba(249,115,22,0.08);color:var(--orange);border-radius:4px;padding:2px 8px;font-size:11px">Educação</span>
+          </div>
+        </div>
+        <div style="background:var(--red-06);border:1px solid var(--red-20);border-radius:7px;padding:10px 13px">
+          <div style="font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">⚠ Audience Expansion — Desligar obrigatoriamente</div>
+          <div style="font-size:11px;color:var(--text2)">A opção "Audience Expansion" do LinkedIn expande automaticamente para perfis "similares" aos definidos — frequentemente saindo do ICP. Desligar em todas as campanhas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tamanho de audiência -->
+  <div class="li-box">
+    <h4>Estimativa de Audiência ICP — Brasil</h4>
+    <div class="li-g3" style="margin-top:12px">
+      <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:8px;padding:12px">
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--li);margin-bottom:8px;text-transform:uppercase">ICP Core (Vendas)</div>
+        <div style="font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--text);margin-bottom:4px">~180K</div>
+        <div style="font-size:11px;color:var(--text2)">Gerentes/Diretores Comerciais · Empresas 11–200 · Brasil</div>
+        <div style="margin-top:6px;font-size:10px;color:var(--li);font-weight:600">Audiência ideal: 100K–500K</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:8px;padding:12px">
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--orange);margin-bottom:8px;text-transform:uppercase">ICP Secundário (Atendimento)</div>
+        <div style="font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--text);margin-bottom:4px">~120K</div>
+        <div style="font-size:11px;color:var(--text2)">Coords. Atendimento/CS · Empresas 11–500 · Brasil</div>
+        <div style="margin-top:6px;font-size:10px;color:var(--orange);font-weight:600">Audiência ideal: 80K–300K</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:8px;padding:12px">
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green);margin-bottom:8px;text-transform:uppercase">ABM — Empresas-Alvo</div>
+        <div style="font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--text);margin-bottom:4px">Lista</div>
+        <div style="font-size:11px;color:var(--text2)">Upload de lista de empresas-alvo para targeting direto · Company targeting nativo</div>
+        <div style="margin-top:6px;font-size:10px;color:var(--green);font-weight:600">Fase 3 do plano — alta conversão</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- L4 — FORMATOS E CRIATIVOS -->
+<section id="li-formatos" style="margin-bottom:36px">
+  <div class="li-section-title">
+    <div class="li-num">L4</div>
+    <h2>Formatos & Criativos — O Que Usar no LinkedIn</h2>
+  </div>
+
+  <div class="li-alert" style="margin-bottom:18px">
+    <div style="font-size:18px;flex-shrink:0">🖼️</div>
+    <div>
+      <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--red-d);margin-bottom:3px">Criativo do Meta/Instagram não funciona no LinkedIn</h4>
+      <p class="li-box-text">O LinkedIn tem contexto profissional — o usuário está no "modo trabalho", não no "modo entretenimento". <strong>Criativos com apelo emocional e visual agressivo (estilo Meta) têm baixo CTR no LinkedIn</strong>. O que funciona: conteúdo educativo, dados e insights do setor, problema de negócio específico, linguagem de par-a-par (profissional para profissional).</p>
+    </div>
+  </div>
+
+  <div class="li-g2" style="margin-bottom:18px">
+    <div>
+      <p style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Formatos por Prioridade para Beemore</p>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div class="li-formato-card">
+          <div class="fc-head"><span class="fc-name">1. Sponsored Content com Lead Gen Form</span><span class="li-tag ativo">Principal</span></div>
+          <div class="fc-body">Conteúdo patrocinado no feed com formulário nativo que pré-preenche dados do perfil LinkedIn. <strong>Melhor relação CPL × qualificação</strong> para B2B SaaS. O Lead Gen Form evita que o lead precise sair do LinkedIn — aumenta completion rate para 10–20%.</div>
+          <div class="fc-metric">CPL estimado: R$80–180 · Qualificação esperada: 25–40% com perguntas de filtro</div>
+        </div>
+        <div class="li-formato-card">
+          <div class="fc-head"><span class="fc-name">2. Document Ads (PDF Carousel)</span><span class="li-tag ok">Recomendado</span></div>
+          <div class="fc-body">Upload de PDF ou apresentação como carrossel de slides. Excelente para conteúdo educativo — "Guia do CRM para equipes de vendas", "Como montar um help desk com SLA". Gera leads de alta intenção com nome + e-mail do perfil.</div>
+          <div class="fc-metric">CPL estimado: R$60–120 · Leads de maior intenção (baixaram conteúdo)</div>
+        </div>
+        <div class="li-formato-card">
+          <div class="fc-head"><span class="fc-name">3. Conversation Ads (InMail)</span><span class="li-tag ok">Fase 2</span></div>
+          <div class="fc-body">Mensagem direta na caixa de entrada do LinkedIn com botões de ação. Alta personalização: "Olá [Nome], vi que você é Gerente Comercial na [Empresa]..." Taxa de abertura: 50–70%. Ideal para retargeting de visitantes do site e ABM.</div>
+          <div class="fc-metric">CPL estimado: R$40–100 · Alta abertura · Abordagem consultiva</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Boas Práticas de Criativo — LinkedIn B2B SaaS</p>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-left:3px solid var(--li);border-radius:8px;padding:10px 13px">
+          <div style="font-size:11px;font-weight:600;color:var(--li);margin-bottom:3px">Hook com dado ou problema específico</div>
+          <div style="font-size:11px;color:var(--text2);">"72% dos gestores comerciais perdem vendas por falta de follow-up sistemático" → chama atenção do ICP exato sem precisar de imagem chamativa</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-left:3px solid var(--li);border-radius:8px;padding:10px 13px">
+          <div style="font-size:11px;font-weight:600;color:var(--li);margin-bottom:3px">Imagem: pessoa real do segmento, não stock photo</div>
+          <div style="font-size:11px;color:var(--text2);">Foto de um gestor comercial real (cliente Beemore) ou mockup de dashboard com dados reais gera mais CTR que imagens genéricas de "equipe sorrindo"</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-left:3px solid var(--li);border-radius:8px;padding:10px 13px">
+          <div style="font-size:11px;font-weight:600;color:var(--li);margin-bottom:3px">Texto introdutório: 1–2 linhas de problema + CTA</div>
+          <div style="font-size:11px;color:var(--text2);">LinkedIn mostra as primeiras 150 caracteres antes do "ver mais". O problema deve estar nessas 150 chars para que o ICP se identifique antes de decidir clicar.</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--gray-2);border-left:3px solid var(--li);border-radius:8px;padding:10px 13px">
+          <div style="font-size:11px;font-weight:600;color:var(--li);margin-bottom:3px">Testar: imagem estática vs. vídeo curto (15–30s)</div>
+          <div style="font-size:11px;color:var(--text2);">Vídeos curtos de demonstração de produto têm boa performance no LinkedIn para SaaS. Mostrar o pipeline do Beemore em 15 segundos pode gerar mais qualificação que texto.</div>
+        </div>
+        <div style="background:var(--red-06);border:1px solid var(--red-20);border-left:3px solid var(--red);border-radius:8px;padding:10px 13px">
+          <div style="font-size:11px;font-weight:600;color:var(--red);margin-bottom:3px">❌ Evitar: criativos do Meta reaproveitados</div>
+          <div style="font-size:11px;color:var(--text2);">Anúncios com fundo colorido, emoji excessivo ou CTA "Fale agora — sem compromisso" têm CTR baixo no LinkedIn e afastam o perfil profissional buscado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lead Gen Form setup -->
+  <div class="li-alert-warn">
+    <div style="font-size:18px;flex-shrink:0">📋</div>
+    <div>
+      <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--amber);margin-bottom:3px">Lead Gen Form: configurar com 2 campos de qualificação além dos dados do perfil</h4>
+      <p class="li-box-text">O LinkedIn pré-preenche automaticamente: nome, e-mail, empresa, cargo e telefone. Adicionar <strong>2 perguntas customizadas</strong> aumenta a qualificação sem reduzir demais o volume: <strong>(1) "Quantas pessoas na equipe de vendas/atendimento?" · (2) "Qual o maior desafio do seu time hoje?"</strong> — o LinkedIn permite perguntas de múltipla escolha que qualificam antes do envio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- L5 — ANÁLISE DE COPY -->
+<section id="li-copy" style="margin-bottom:36px">
+  <div class="li-section-title">
+    <div class="li-num">L5</div>
+    <h2>Análise de Copy — Linguagem Profissional para LinkedIn</h2>
+  </div>
+
+  <div class="li-g2" style="margin-bottom:18px">
+    <div>
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid var(--red-20)">Copy Estilo Meta — Não Funciona no LinkedIn</div>
+      <div class="copy-pattern" style="border-color:var(--red-20)">
+        <div class="cp-head"><span class="cp-name">Tom promocional genérico</span><span class="meta-tag lose">Evitar</span></div>
+        <div class="cp-body">No LinkedIn, profissionais ignoram anúncios que parecem publicidade direta. Frases como "Transforme seus resultados!" ou "Plataforma incrível para sua empresa!" soam como spam no contexto profissional — o usuário está em modo de trabalho, não consumo.</div>
+        <div class="cp-example">"Transforme seu atendimento com o Beemore! 🚀 Teste grátis agora!"</div>
+      </div>
+      <div class="copy-pattern" style="border-color:var(--red-20)">
+        <div class="cp-head"><span class="cp-name">Emoji em excesso</span><span class="meta-tag lose">Evitar</span></div>
+        <div class="cp-body">Emojis reduzem a percepção de profissionalismo no LinkedIn. Máximo 1–2 por post, e somente quando reforçam o ponto. O mesmo criativo que funciona no Instagram pode ser filtrado mentalmente como "não relevante para mim" no LinkedIn.</div>
+        <div class="cp-example">"🎯 CRM + Help Desk + WhatsApp 💬 Tudo em um só lugar! 🔥 Sem compromisso!"</div>
+      </div>
+      <div class="copy-pattern" style="border-color:var(--red-20)">
+        <div class="cp-head"><span class="cp-name">CTA de baixa fricção inadequado para B2B</span><span class="meta-tag lose">Evitar</span></div>
+        <div class="cp-body">"Teste grátis agora" sem contexto de cargo funciona no Google mas não qualifica no LinkedIn. O ICP de LinkedIn espera um próximo passo profissional — demo, consulta, webinar, conteúdo exclusivo.</div>
+        <div class="cp-example">"Clique e teste grátis! Sem cartão, sem compromisso."</div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--li);margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid var(--li-20)">Copy LinkedIn — Profissional e Específico para o ICP</div>
+      <div class="copy-pattern" style="border-color:var(--li-20)">
+        <div class="cp-head"><span class="cp-name">Dado + Problema + Solução</span><span class="meta-inline-tag g">Usar</span></div>
+        <div class="cp-body">Abre com um insight de mercado ou dado que o ICP reconhece como verdadeiro, nomeia o problema que isso causa, apresenta a solução. Funciona porque parece conteúdo, não publicidade.</div>
+        <div class="cp-example">"Times de vendas com mais de 5 pessoas perdem em média 3 negócios por mês por falta de follow-up sistemático. Veja como o Beemore organiza o pipeline e elimina esse problema. → Solicitar demonstração para meu time"</div>
+      </div>
+      <div class="copy-pattern" style="border-color:var(--li-20)">
+        <div class="cp-head"><span class="cp-name">Cargo + Dor Específica + CTA Profissional</span><span class="meta-inline-tag g">Usar</span></div>
+        <div class="cp-body">Nomear o cargo no início do copy faz o ICP parar o scroll — "Isso é para mim." CTA profissional (demo, consulta) é mais eficaz que "teste grátis" para o decisor B2B no LinkedIn.</div>
+        <div class="cp-example">"Para gerentes comerciais que ainda gerenciam pipeline em planilha: o Beemore centraliza CRM, atendimento e WhatsApp sem precisar de integrações. Agendar demonstração para minha equipe →"</div>
+      </div>
+      <div class="copy-pattern" style="border-color:var(--li-20)">
+        <div class="cp-head"><span class="cp-name">Case / Resultado de cliente similar</span><span class="meta-inline-tag g">Usar</span></div>
+        <div class="cp-body">No LinkedIn, prova social por cargo/setor tem o maior poder de conversão. "Uma empresa de varejo com 15 vendedores reduziu o tempo de resposta ao cliente de 4h para 40min com o Beemore" — o Gerente Comercial de varejo se identifica imediatamente.</div>
+        <div class="cp-example">"[Empresa do segmento] reduziu 40% no tempo de fechamento de vendas com o pipeline do Beemore. Veja como → Solicitar análise gratuita para minha equipe"</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="li-box">
+    <h4>Framework de Copy LinkedIn para Beemore — 3 Templates Prontos</h4>
+    <div class="li-g3" style="margin-top:12px">
+      <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:8px;padding:13px">
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--li);margin-bottom:6px;text-transform:uppercase">Template 1 — Problema de Pipeline</div>
+        <p style="font-size:11.5px;color:var(--text2);line-height:1.65;font-style:italic">"Se você lidera um time de vendas, provavelmente já perdeu negócios por falta de follow-up. O Beemore resolve isso com pipeline visual, atividades automáticas e WhatsApp integrado — tudo num único sistema. Feito para times de 5–50 vendedores. → Agendar demo"</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:8px;padding:13px">
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--orange);margin-bottom:6px;text-transform:uppercase">Template 2 — Problema de Atendimento</div>
+        <p style="font-size:11.5px;color:var(--text2);line-height:1.65;font-style:italic">"Gerenciar atendimento por WhatsApp sem sistema é uma bomba-relógio. Tickets perdidos, SLA quebrado, cliente insatisfeito. O Beemore centraliza WhatsApp, chat e help desk com SLA e visibilidade completa. → Ver como funciona para minha equipe"</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-2);border-radius:8px;padding:13px">
+        <div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--green);margin-bottom:6px;text-transform:uppercase">Template 3 — Comparação com Pilha Atual</div>
+        <p style="font-size:11.5px;color:var(--text2);line-height:1.65;font-style:italic">"CRM em uma ferramenta. Atendimento em outra. WhatsApp numa terceira. Quando o contexto do cliente se perde entre sistemas, você perde negócios. O Beemore une tudo nativamente — sem integrações frágeis. → Solicitar demonstração"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- L6 — PLANO 90 DIAS LINKEDIN -->
+<section id="li-plano" style="margin-bottom:36px">
+  <div class="li-section-title">
+    <div class="li-num">L6</div>
+    <h2>Plano de Ação 90 Dias — LinkedIn Ads</h2>
+  </div>
+
+  <div class="li-alert-blue" style="margin-bottom:22px">
+    <div style="font-size:18px;flex-shrink:0">🎯</div>
+    <div>
+      <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--li);margin-bottom:3px">Objetivo dos 90 dias: validar o canal com leads qualificados e custo previsível</h4>
+      <p class="li-box-text">LinkedIn é o canal com maior potencial para a Beemore — mas é também o mais caro por clique. O plano de 90 dias foca em <strong>validar a hipótese com budget controlado</strong>, encontrar o conjunto de cargo + criativo + copy com melhor taxa de qualificação, e só então escalar. Meta conservadora: <strong>20–40 leads qualificados no período, com CPL ≤ R$200.</strong></p>
+    </div>
+  </div>
+
+  <!-- Fase 1 -->
+  <div class="li-plan-phase" style="margin-bottom:16px">
+    <div class="li-plan-phase-header">
+      <span class="li-phase-badge">FASE 1</span>
+      <h3>Fundação e Configuração <span>Dias 1–30</span></h3>
+    </div>
+    <div class="li-g2" style="margin-bottom:14px">
+      <div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--li);margin-bottom:8px">Setup Técnico (Dias 1–7)</div>
+        <ul class="li-checklist">
+          <li><strong>Instalar LinkedIn Insight Tag</strong> no beemore.com para habilitar retargeting e conversions (equivalente ao pixel do Meta)</li>
+          <li><strong>Configurar eventos de conversão:</strong> "Formulário enviado", "Demo solicitada", "Página de planos visitada"</li>
+          <li><strong>Criar Company Page otimizada</strong> no LinkedIn — necessária para Sponsored Content (logo, banner, descrição, página de carreira)</li>
+          <li><strong>Instalar LinkedIn Lead Gen Form</strong> com 2 perguntas de qualificação customizadas</li>
+          <li><strong>Criar audience de retargeting</strong> a partir de visitantes do site (mínimo 300 pessoas)</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--li);margin-bottom:8px">Segmentação e Campanhas (Dias 7–14)</div>
+        <ul class="li-checklist">
+          <li><strong>Criar Campanha A — ICP Core:</strong> Gerentes/Diretores Comerciais · Empresas 11–200 funcionários · Lead Gen Form · R$1.500/mês</li>
+          <li><strong>Criar Campanha B — Atendimento:</strong> Coords. Atendimento/CS · Head de Suporte · Empresas 11–500 · Lead Gen Form · R$1.000/mês</li>
+          <li><strong>Desabilitar Audience Expansion</strong> em ambas as campanhas obrigatoriamente</li>
+          <li><strong>Produzir 2 criativos por campanha</strong> usando os templates de copy LinkedIn (seção L5)</li>
+          <li><strong>Definir métricas de corte semanal:</strong> CTR abaixo de 0,3% → pausar criativo; Taxa qualificação abaixo de 15% → revisar segmentação</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--li);margin-bottom:8px">Monitoramento e Qualificação (Dias 14–30)</div>
+      <ul class="li-checklist">
+        <li><strong>Monitorar Lead Gen Form semanalmente:</strong> taxa de preenchimento, respostas às perguntas de qualificação, cargo real dos leads</li>
+        <li><strong>Qualificar manualmente os primeiros 20 leads</strong> — ligar ou enviar e-mail para entender perfil e interesse real</li>
+        <li><strong>Registrar taxa de qualificação por campanha</strong> (A vs. B) para informar decisão da Fase 2</li>
+        <li><strong>Testar formato Document Ad:</strong> produzir um PDF de 5–8 slides "Guia: Como organizar seu pipeline de vendas" para gerar leads de maior intenção</li>
+      </ul>
+    </div>
+    <div style="margin-top:14px;padding:12px 16px;background:var(--li-06);border-radius:8px">
+      <p style="font-size:12px;color:var(--li);font-weight:600">🎯 Meta da Fase 1: Insight Tag instalado · 2 campanhas ativas · primeiros 15–20 leads · taxa de qualificação mapeada. Budget: R$2.500/mês.</p>
+    </div>
+  </div>
+
+  <!-- Fase 2 -->
+  <div class="li-plan-phase p2" style="margin-bottom:16px">
+    <div class="li-plan-phase-header">
+      <span class="li-phase-badge p2">FASE 2</span>
+      <h3>Otimização e Teste de Formatos <span>Dias 31–60</span></h3>
+    </div>
+    <div class="li-g2" style="margin-bottom:14px">
+      <div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--orange);margin-bottom:8px">Ampliar a Campanha Vencedora</div>
+        <ul class="li-checklist">
+          <li class="p2"><strong>Dobrar budget da campanha com taxa de qualificação ≥ 20%</strong> na Fase 1</li>
+          <li class="p2"><strong>Pausar definitivamente</strong> qualquer campanha com taxa de qualificação < 10% após 3 semanas</li>
+          <li class="p2"><strong>Expandir segmentação da vencedora</strong> com novos cargos do mesmo ICP validado</li>
+          <li><strong>Testar Conversation Ads (InMail)</strong> para retargeting de visitantes do site e leads que não converteram</li>
+          <li><strong>Lançar Document Ad</strong> com o PDF produzido na Fase 1 — comparar CPL e qualificação com Sponsored Content</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--orange);margin-bottom:8px">Otimização de Copy e Criativo</div>
+        <ul class="li-checklist">
+          <li class="p2"><strong>A/B test de intro copy:</strong> Template "Dado + Problema" vs. Template "Cargo + Dor" (ver seção L5)</li>
+          <li class="p2"><strong>Testar imagem estática vs. vídeo de 15–30s</strong> do produto em ação</li>
+          <li class="p2"><strong>Personalizar copy por segmento:</strong> copy diferente para Gerente Comercial vs. Coord. Atendimento</li>
+          <li><strong>Criar 1 case de cliente</strong> (com autorização) para usar como criativo — maior prova social por segmento</li>
+          <li><strong>Implementar landing page específica</strong> (/linkedin-crm-vendas) com headline alinhada ao copy do anúncio LinkedIn</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:14px;padding:12px 16px;background:rgba(249,115,22,0.06);border-radius:8px">
+      <p style="font-size:12px;color:var(--orange);font-weight:600">🎯 Meta da Fase 2: ≥ 20 leads qualificados no período · Taxa qualificação ≥ 25% · 2 formatos testados · vencedor identificado. Budget: R$3.000/mês.</p>
+    </div>
+  </div>
+
+  <!-- Fase 3 -->
+  <div class="li-plan-phase p3" style="margin-bottom:16px">
+    <div class="li-plan-phase-header">
+      <span class="li-phase-badge p3">FASE 3</span>
+      <h3>Escala e ABM <span>Dias 61–90</span></h3>
+    </div>
+    <ul class="li-checklist" style="margin-bottom:14px">
+      <li class="p3"><strong>Triplicar budget do formato e segmentação com melhor CPL qualificado</strong> (≤ R$180) da Fase 2</li>
+      <li class="p3"><strong>Ativar Account-Based Marketing (ABM):</strong> criar lista das 100–200 empresas-alvo ideais e fazer upload no LinkedIn para targeting direto — anúncio aparece apenas para colaboradores dessas empresas</li>
+      <li class="p3"><strong>Lançar Conversation Ad personalizado para decisores das empresas-alvo:</strong> mensagem direta no estilo "Vi que você é [Cargo] na [Empresa]..." com proposta de valor específica para o setor</li>
+      <li class="p3"><strong>Criar Lookalike Audience</strong> a partir dos leads qualificados gerados nas Fases 1 e 2 (requer mínimo 300 leads para LAL no LinkedIn)</li>
+      <li class="p3"><strong>Integrar LinkedIn Lead Gen Forms com CRM Beemore</strong> via Zapier/webhook para rastrear qualificação e jornada em tempo real</li>
+      <li class="p3"><strong>Iniciar estratégia de conteúdo orgânico complementar:</strong> posts da Company Page sobre cases, insights do setor e demos — tráfego orgânico reduz CPL médio</li>
+      <li class="p3"><strong>Medir CAC LinkedIn vs. Meta vs. Google</strong> para alocação de budget no próximo trimestre</li>
+    </ul>
+    <div style="margin-top:14px;padding:12px 16px;background:rgba(22,163,74,0.06);border-radius:8px">
+      <p style="font-size:12px;color:var(--green);font-weight:600">🎯 Meta da Fase 3: ≥ 35 leads qualificados/mês · CPL qualificado ≤ R$180 · 3–5 demos agendadas/semana · ABM ativo · Budget: R$4.000–R$5.000/mês</p>
+    </div>
+  </div>
+
+  <!-- KPIs do plano -->
+  <div class="li-box" style="margin-top:22px">
+    <h4>🎯 Metas e KPIs do Plano 90 Dias — LinkedIn Ads</h4>
+    <div class="goals-grid-li" style="margin-top:14px">
+      <div class="goal-card-li">
+        <div class="gc-label">Taxa de Qualificação</div>
+        <div class="gc-now">Meta inicial: 20%</div>
+        <div class="gc-target">→ 30%+</div>
+      </div>
+      <div class="goal-card-li">
+        <div class="gc-label">Leads Qualif./Mês</div>
+        <div class="gc-now">Meta inicial: 15</div>
+        <div class="gc-target">→ 35+</div>
+      </div>
+      <div class="goal-card-li">
+        <div class="gc-label">CPL Qualificado</div>
+        <div class="gc-now">Meta inicial: ≤ R$250</div>
+        <div class="gc-target">→ ≤ R$180</div>
+      </div>
+      <div class="goal-card-li">
+        <div class="gc-label">CTR Sponsored Content</div>
+        <div class="gc-now">Mínimo: 0,3%</div>
+        <div class="gc-target">→ 0,6%+</div>
+      </div>
+      <div class="goal-card-li">
+        <div class="gc-label">Lead Gen Form Compl.</div>
+        <div class="gc-now">Meta: 12%</div>
+        <div class="gc-target">→ 18%+</div>
+      </div>
+      <div class="goal-card-li">
+        <div class="gc-label">Budget Mensal</div>
+        <div class="gc-now">Fase 1: R$2.500</div>
+        <div class="gc-target">→ R$4.000–5.000</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conclusão -->
+  <div class="li-alert-ok" style="margin-top:18px">
+    <div style="font-size:18px;flex-shrink:0">🚀</div>
+    <div>
+      <h4 style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--green);margin-bottom:5px">Conclusão: LinkedIn é o canal com maior potencial de ROI para a Beemore em 90 dias</h4>
+      <p class="li-box-text">Google Ads teve zero conversões em R$413. Meta Ads teve 0 leads qualificados em R$17.907. O LinkedIn tem o que os outros canais não têm: <strong>a capacidade de encontrar o decisor B2B exato pelo cargo, empresa e setor — sem depender de intenção de busca ou algoritmo de interesse</strong>. Com o plano correto (Lead Gen Forms qualificados, targeting por cargo, copy profissional e budget mínimo de R$2.500/mês), a Beemore pode gerar os primeiros leads qualificados em 30 dias e escalar com previsibilidade em 90 dias.</p>
+    </div>
+  </div>
+</section>
+
+</div><!-- /li-content -->
 
 </main>
 
